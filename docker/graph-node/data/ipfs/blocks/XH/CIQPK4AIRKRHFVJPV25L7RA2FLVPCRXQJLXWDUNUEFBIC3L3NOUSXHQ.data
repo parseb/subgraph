@@ -1,0 +1,78 @@
+
+‹ƒdataSources:
+  - kind: ethereum/contract
+    mapping:
+      abis:
+        - file:
+            /: /ipfs/QmeKig5yfC1sXS5h1Ke5qEWj6vmqYcbA7aaMohMDVpwxVg
+          name: Vault
+      apiVersion: 0.0.4
+      entities:
+        - Approval
+        - ClaimProcessed
+        - DepositMade
+        - EmergencyShutdown
+        - GovernanceTransferred
+        - StrategyAdded
+        - StrategyAddedToQueue
+        - StrategyRemovedFromQueue
+        - StrategyReported
+        - StrategyRevoked
+        - StrategyUpdateDebtRatio
+        - StrategyUpdateMaxDebtPerHarvest
+        - StrategyUpdateMinDebtPerHarvest
+        - StrategyUpdatePerformanceFee
+        - Transfer
+        - UpdateWithdrawalQueue
+        - WithdrawalMade
+      eventHandlers:
+        - event: 'Approval(indexed address,indexed address,uint256)'
+          handler: handleApproval
+        - event: 'ClaimProcessed(indexed uint256,indexed address,indexed uint256)'
+          handler: handleClaimProcessed
+        - event: 'DepositMade(indexed address,indexed uint256,indexed uint256)'
+          handler: handleDepositMade
+        - event: EmergencyShutdown(bool)
+          handler: handleEmergencyShutdown
+        - event: GovernanceTransferred(address)
+          handler: handleGovernanceTransferred
+        - event: 'StrategyAdded(indexed address,uint256,uint256,uint256,uint256)'
+          handler: handleStrategyAdded
+        - event: StrategyAddedToQueue(indexed address)
+          handler: handleStrategyAddedToQueue
+        - event: StrategyRemovedFromQueue(indexed address)
+          handler: handleStrategyRemovedFromQueue
+        - event: >-
+            StrategyReported(indexed
+            address,uint256,uint256,uint256,uint256,uint256,uint256,uint256,uint256)
+          handler: handleStrategyReported
+        - event: StrategyRevoked(address)
+          handler: handleStrategyRevoked
+        - event: 'StrategyUpdateDebtRatio(indexed address,indexed uint256)'
+          handler: handleStrategyUpdateDebtRatio
+        - event: 'StrategyUpdateMaxDebtPerHarvest(indexed address,indexed uint256)'
+          handler: handleStrategyUpdateMaxDebtPerHarvest
+        - event: 'StrategyUpdateMinDebtPerHarvest(indexed address,indexed uint256)'
+          handler: handleStrategyUpdateMinDebtPerHarvest
+        - event: 'StrategyUpdatePerformanceFee(indexed address,indexed uint256)'
+          handler: handleStrategyUpdatePerformanceFee
+        - event: 'Transfer(indexed address,indexed address,uint256)'
+          handler: handleTransfer
+        - event: 'UpdateWithdrawalQueue(indexed address[])'
+          handler: handleUpdateWithdrawalQueue
+        - event: 'WithdrawalMade(indexed address,indexed uint256)'
+          handler: handleWithdrawalMade
+      file:
+        /: /ipfs/QmUdvGhvvajdVg2L4NdAEHYdYv1BZxwiqLzUGLJ2FuTfo5
+      kind: ethereum/events
+      language: wasm/assemblyscript
+    name: Vault
+    network: rinkeby
+    source:
+      abi: Vault
+      address: '0xB01866e0Ef4D87368F675A83Fd3491072561A9C4'
+schema:
+  file:
+    /: /ipfs/QmSAp4ymgZtiCd3aE7hzW9aMAWsTLcqpF1nnZzxZgba6pN
+specVersion: 0.0.2
+ƒ

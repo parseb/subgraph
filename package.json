@@ -1,0 +1,19 @@
+{
+  "name": "solacefi_rinkeby",
+  "license": "UNLICENSED",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ solacefi_rinkeby",
+    "create-local": "graph create --node http://localhost:8020/ solacefi_rinkeby",
+    "remove-local": "graph remove --node http://localhost:8020/ solacefi_rinkeby",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 solacefi_rinkeby"
+  },
+  "dependencies": {
+    "@amxx/graphprotocol-utils": "^1.1.0-alpha.1",
+    "@graphprotocol/graph-cli": "0.25.1",
+    "@graphprotocol/graph-ts": "0.24.1",
+    "@openzeppelin/contracts": "^4.4.1",
+    "@openzeppelin/subgraphs": "^0.1.6"
+  }
+}

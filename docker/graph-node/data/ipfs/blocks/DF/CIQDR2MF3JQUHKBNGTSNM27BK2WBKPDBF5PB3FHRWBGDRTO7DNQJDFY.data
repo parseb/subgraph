@@ -1,0 +1,14 @@
+
+ãÛtype ExampleEntity @entity {
+  id: ID!
+  count: BigInt!
+  owner: Bytes! # address
+  spender: Bytes! # address
+}
+
+type DepositMade @entity {
+  id: ID!
+  depositor: Bytes! # address, 
+  amount: BigInt!
+  shares: BigInt!
+}Û

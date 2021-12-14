@@ -1,0 +1,8 @@
+
+vptype ExampleEntity @entity {
+  id: ID!
+  count: BigInt!
+  owner: Bytes! # address
+  spender: Bytes! # address
+}
+p
